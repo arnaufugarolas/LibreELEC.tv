@@ -20,20 +20,20 @@ case "${LINUX}" in
     PKG_SHA256="008b00968a8bfc0627580b82a2d30c7304336a4f92a58e80cdbc2d4723e01840"
     PKG_URL="https://github.com/torvalds/linux/archive/${PKG_VERSION}.tar.gz"
     PKG_SOURCE_NAME="linux-${LINUX}-${PKG_VERSION}.tar.gz"
-    PKG_PATCH_DIRS="default rtlwifi/6.17"
+    PKG_PATCH_DIRS="default rtlwifi/6.18"
     ;;
   raspberrypi)
-    PKG_VERSION="5a72e3ae00ecdd02244e867c2880a3ac0653ee25" # 6.12.40
-    PKG_SHA256="ef92cb35db68978a76f527988a11046c8598d2a512a03de67c8cde5467ddcecb"
+    PKG_VERSION="21b410140c47ffab5668399f6f143c7d7b935c8b" # 6.12.61
+    PKG_SHA256="7c31df8061aae748a6e72417bfe743a54198fb5bdc96e229ecc605dc621d32ef"
     PKG_URL="https://github.com/raspberrypi/linux/archive/${PKG_VERSION}.tar.gz"
     PKG_SOURCE_NAME="linux-${LINUX}-${PKG_VERSION}.tar.gz"
-    PKG_PATCH_DIRS="raspberrypi rtlwifi/6.13 rtlwifi/6.14 rtlwifi/6.15 rtlwifi/6.17"
+    PKG_PATCH_DIRS="raspberrypi rtlwifi/6.13 rtlwifi/6.14 rtlwifi/6.15 rtlwifi/6.18"
     ;;
   *)
-    PKG_VERSION="6.16"
-    PKG_SHA256="1a4be2fe6b5246aa4ac8987a8a4af34c42a8dd7d08b46ab48516bcc1befbcd83"
+    PKG_VERSION="6.16.12"
+    PKG_SHA256="7ca4debc5ca912ebb8a76944a5c118afd5d09e31ef43c494adb14273da29a26e"
     PKG_URL="https://www.kernel.org/pub/linux/kernel/v${PKG_VERSION/.*/}.x/${PKG_NAME}-${PKG_VERSION}.tar.xz"
-    PKG_PATCH_DIRS="default rtlwifi/6.17"
+    PKG_PATCH_DIRS="default rtlwifi/6.18"
     ;;
 esac
 

@@ -2,8 +2,8 @@
 # Copyright (C) 2022-present Team LibreELEC (https://libreelec.tv)
 
 PKG_NAME="moby"
-PKG_VERSION="28.3.3"
-PKG_SHA256="3727c8963ab4bcff12291e99e4d4a6b9a29ace5236fd245717bbff648f15f8cd"
+PKG_VERSION="28.5.2"
+PKG_SHA256="0e450c03c536a1304ba8fd26ca4c4ff96fac62182fd042fec90ffdf4a0969d40"
 PKG_LICENSE="ASL"
 PKG_SITE="https://mobyproject.org/"
 PKG_URL="https://github.com/moby/moby/archive/v${PKG_VERSION}.tar.gz"
@@ -12,7 +12,7 @@ PKG_LONGDESC="Moby is an open-source project created by Docker to enable and acc
 PKG_TOOLCHAIN="manual"
 
 # Git commit of the matching release https://github.com/moby/moby
-export PKG_GIT_COMMIT="bea959c7b793b32a893820b97c4eadc7c87fabb0"
+export PKG_GIT_COMMIT="89c5e8fd66634b6128fc4c0e6f1236e2540e46e0"
 
 PKG_MOBY_BUILDTAGS="daemon \
                     autogen \
@@ -31,7 +31,7 @@ configure_target() {
   export VERSION=${PKG_VERSION}
   export BUILDTIME="$(date --utc)"
 
-  cat > "${PKG_BUILD}/go.mod" << EOF
+  cat >"${PKG_BUILD}/go.mod" <<EOF
 module github.com/docker/docker
 
 go 1.18
